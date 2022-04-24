@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const morgan = require("morgan")
-const port = 3001
+const port = process.env.PORT || 3001
 
 const unknownEndpoint = (request, response) => {
     response.status(404).send({ error: 'OoOoOoOoOoOoOoOops! page not found' })
